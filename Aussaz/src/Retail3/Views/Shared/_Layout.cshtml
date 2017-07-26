@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Retail3</title>
+    <meta name="description" content="Retail Store Backend Solution" />
+    <meta name="keywords" content="POS , Backend , Grocery store, Convinace Store, Backend Solutions" />
+    <meta name="author" content="Cephic Inc" />
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link href="~/lib/DataTables/media/css/dataTables.bootstrap.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-switch.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/lib/Font-Awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/normalize.css" rel="stylesheet" />
+        <link href="~/css/demo.css" rel="stylesheet" />
+        <link href="~/css/icons.css" rel="stylesheet" />
+        <link href="~/css/component.css" rel="stylesheet" />
+        <script src="~/js/modernizr.custom.js"></script>
+        @RenderSection("scripts0", required: false)
+    </environment>
+    
+</head>
+<body >
+   
+    
+ <div class="container" >
+     <div class="mp-pusher" id="mp-pusher">
+         @Html.Partial("_Navbar")
+
+         <div id="divContent" class="scroller">
+             <div class="scroller-inner ml15">
+                 
+                     @RenderBody()
+                
+             </div>
+             </div>
+         </div>
+     </div>
+   
+    <footer class="main ">
+        <div class="footer-copyright sticky-footer">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <p class="ml15">Copyright © 2016, All Rights Reserved Powerd @@ Cephic Inc </p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    @*<div class="container">
+        <!-- Push Wrapper -->
+        <div class="mp-pusher" id="mp-pusher">
+            <!-- mp-menu -->
+            @Html.Partial("_Navbar")
+                <div class="scroller-inner">
+                    <div class="clearfix">
+                        <div class="container body-content">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            
+            
+          
+        </div><!-- /pusher -->
+    </div><!-- /container -->*@
+    
+    
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/bootstrap-switch.min.js"></script>
+    <script src="~/lib/DataTables/media/js/dataTables.bootstrap.js"></script>
+    <script src="~/lib/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="~/js/classie.js"></script>
+    <script src="~/js/mlpushmenu.js"></script>
+    @RenderSection("scripts", required: false)
+  
+    
+    <script>
+			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
+        type : 'cover'
+			} );
+    </script>
+</body>
+</html>

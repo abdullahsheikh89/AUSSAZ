@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="/assets/lib/bootstrap/dist/css/bootstrap.css" />
    <link href="/assets/lib/DataTables/media/css/dataTables.bootstrap.css" rel="stylesheet" />
-  <link href="/assets/css/bootstrap-switch.min.css" rel="stylesheet" />
+ 
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link href="/assets/lib/Font-Awesome/css/font-awesome.css" rel="stylesheet" />
   <link href="/assets/css/normalize.css" rel="stylesheet" />
@@ -17,6 +17,50 @@
   <link href="/assets/css/icons.css" rel="stylesheet" />
   <link href="/assets/css/component.css" rel="stylesheet" />
   <script src="/assets/js/modernizr.custom.js"></script>
+   
+   <script>
+        $("[name='status']").bootstrapSwitch();
+        {
+           
+        };
+</script>
+<style>
+    .cancel, .save,  select, input, .MP4  {
+        display: none;
+    }
+
+    .editing .save,
+    .editing .cancel,
+    .editing .MP4,
+    .editing input,
+    .editing select
+     {
+        display: inline-block;
+    }
+   
+    .editing .edit,
+    .editing .display {
+        display: none;
+    }
+
+    input, select {
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+</style>
 </head>
 <body>
   <app-root></app-root>
@@ -30,6 +74,33 @@
     <script src="/assets/lib/DataTables/media/js/dataTables.jqueryui.js"></script>
     <script src="/assets/js/classie.js"></script>
     <script src="/assets/js/mlpushmenu.js"></script>
+     <script>
+        $("[name='status']").bootstrapSwitch();
+        {
+          
+        };
+      
+        $(".edit").on("click", function () {
+            $(this).parents("form").addClass("editing");
+        });
+        $(".cancel").on("click", function () {
+            $(this).parents("form").removeClass("editing");
+        });
+        (function () {
+            var form = document.querySelector("form"),
+                editButton = document.querySelector(".edit"),
+                cancelButton = document.querySelector(".cancel");
+
+            editButton.addEventListener("click", function () {
+                form.classList.add("editing");
+            });
+            cancelButton.addEventListener("click", function () {
+                form.classList.remove("editing");
+            });
+        }());
+
+
+    </script>
      <script>
 
       
@@ -63,7 +134,7 @@
          new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
             type : 'cover'
           });
-          
+         
           
        });
 			

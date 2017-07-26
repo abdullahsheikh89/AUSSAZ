@@ -1,0 +1,227 @@
+﻿@{
+    ViewData["Title"] = "Setup";
+}
+<div class="ml15 mr15 mt10 mb100">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="col-md-3">
+                <h2>New Size</h2>
+
+            </div>
+            <div class="col-md-5 mt10">
+                
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bgred">Descriptive Name</span>
+                        <input class="text form-control "/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mt10">
+                
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bgred">Gender</span>
+                        <select class="form-control">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mt10">
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bgred">Size Type</span>
+                        <select class="form-control">
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div class="col-md-3">
+
+            <a class="btn btn-danger btn-lg pull-right mt15 " asp-area="" asp-controller="Size" asp-action="Index"><i class="fa fa-home "></i> Cancel</a>
+            <a class="btn btn-success btn-lg  mt15 pull-right mr10 " asp-area="" asp-controller="Size" asp-action="Edit"><i class="fa fa-save"></i> Save</a>
+           
+        </div>
+
+    </div>
+    <hr />
+    <div class="row">
+
+
+        <form>
+            <div class="row ml10 ">
+
+                <div class="col-md-3">
+
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">1. Height</span>
+                            <input class="text form-control " />
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">2. Neck Depth Front</span>
+
+                            <input class="text form-control " />
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">2A. Neck Depth Back</span>
+
+                            <input class="text form-control " />
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">3. Shoulders</span>
+
+                            <input class="text form-control " />
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">4. Shoulders to Waist</span>
+
+                            <label class="text form-control "></label>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">4A. Shoulders to Knee</span>
+
+                            <input class="text form-control " />
+                            <span class="text-danger ml10 mt10 h5">Top Length- As Per Required</span>
+</div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">5. Armhole</span>
+                           
+                            <label class="text form-control "></label>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">6. Sleeve Length</span>
+
+                            <label class="text form-control "></label>
+                            <span class="text-danger ml10 mt10 h5">As Required</span>
+                        </div>
+                    </div>
+                        </div>
+                <div class="col-md-3">
+                    
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">7. Sleeve Bottom</span>
+
+                            <label class="text form-control "></label>
+                            <span class="text-danger ml10 mt10 h5">Around</span>
+</div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">8. Above Breast</span>
+                            
+                            <label class="text form-control "></label>
+                            <span class="text-danger ml10 mt10 h5">Around</span>
+                        </div>
+                        </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">9. Around Breast</span>
+
+                            <label class="text form-control "></label>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">10. Below Breast</span>
+                            <label class="text form-control "></label>
+                            <span class="text-danger ml10 mt10 h5">Around</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">11. Around Waist</span>
+                            <label class="text form-control "></label>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">12. Around Hips</span>
+                            <label class="text form-control "></label>
+                        </div>
+                    </div>
+                      
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon bgblue">13. Around Thighs</span>
+                            <label class="text form-control "></label>
+                            <span class="text-danger ml10 mt10 h5">For Chudhidhar / Paints</span>
+                        </div>
+                    </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group mt10">
+                                <div class="input-group ">
+                                    <span class="input-group-addon bgblue">14. Around Knees</span>
+                                    <label class="text form-control "></label>
+                                    <span class="text-danger ml10 mt10 h5">For Chudhidhar / Paints</span>
+                                </div>
+                            </div>
+                            <div class="form-group mt10">
+                                <div class="input-group ">
+                                    <span class="input-group-addon bgblue">15. Around Calves</span>
+                                    <label class="text form-control "></label>
+                                    <span class="text-danger ml10 mt10 h5">For Chudhidhar / Paints</span>
+                                </div>
+                            </div>
+                            <div class="form-group mt10">
+                                <div class="input-group ">
+                                    <span class="input-group-addon bgblue">16. Ankle Bottom</span>
+                                    <label class="text form-control "></label>
+                                    <span class="text-danger ml10 mt10 h5">For Chudhidhar / salwar / Paints</span>
+                                </div>
+                            </div>
+                            <div class="form-group mt10">
+                                <div class="input-group ">
+                                    <span class="input-group-addon bgblue">17. Waist To Feet</span>
+                                    <label class="text form-control "></label>
+                                    <span class="text-danger ml10 mt10 h5">Chudhidhar / Salwar / Paints<br/> &nbsp;&nbsp;&nbsp; (Length with Sandals)</span>
+                                </div>
+                            </div>
+                            <div class="form-group mt10">
+                                <div class="input-group ">
+                                    <span class="input-group-addon bgblue">18. Fork Length</span>
+                                    <label class="text form-control "></label>
+                                </div>
+                            </div>
+                            <div class="form-group mt10">
+                                <div class="input-group ">
+                                    <span class="input-group-addon bgblue">19. Inseam</span>
+                                    <label class="text form-control "></label>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                <div class="col-md-3">
+
+                    <img src="~/images/BodySize.png" />
+                </div>
+                </div>
+</form>
+    </div>
+
+
+</div>

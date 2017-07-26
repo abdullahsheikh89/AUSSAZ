@@ -1,0 +1,53 @@
+<div class="ml15 mr15 mt10 mb100">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Item</h2>
+        </div>
+        <div class="col-md-6">
+
+
+            <a class="btn btn-success btn-lg mr10 mb10 mt10 pull-right  " asp-area="" asp-controller="Vendor" asp-action="Create"><i class="fa fa-save"></i> Add New</a>
+
+        </div>
+    </div>
+    <div class="row mt15">
+        <table class="table table-hover table-striped table-condensed dataTable">
+            <thead>
+                <tr>
+                    <th class="col-md-1 pl10 pr10">Vendor Id</th>
+                    <th class="col-md-3 pl10 pr10">Vendor Name</th>
+                    <th class="col-md-2 pl10 pr10">Phone Number</th>
+                    <th class="col-md-2 pl10 pr10">Country</th>
+                    <th class="col-md-1 text-center">Status</th>
+                    <th class="col-md-3 text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="form-control pl10 pr10" /></td>
+                    <td><input class="form-control pl10 pr10" placeholder="Search" /></td>
+                    <td><input class="form-control pl10 pr10" /></td>
+                    <td><input class="form-control pl10 pr10" /></td>
+                    <td><input class="form-control pl10 pr10" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10024</td>
+                    <td>Yasmeen</td>
+                    <td>+92-214-657-2143</td>
+                    <td>India</td>
+                    <td>Active</td>
+                   
+
+                    <td>
+                        <a class="btn btn-info" [routerLink]="['/vendor/editvendor']"><i class="fa fa-eye "></i> </a>
+
+                    </td>
+
+
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,255 @@
+﻿@{
+    ViewData["Title"] = "Item";
+}
+@section Scripts{
+    <script>
+        $("[name='status']").bootstrapSwitch();
+        {
+           
+        };
+    </script>
+}
+<div class="ml15 mr15 mt10 mb100">
+    <div class="row ml5">
+        <div class="col-md-6">
+            <div class="row">
+                <h3>Add New Item</h3>
+                <p><h4 class="text-danger">125487</h4></p>
+            </div>
+
+            <div class="row ">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Sale</label>
+                        <div class="row ml5">
+                            <input type="checkbox"  class="form-control " 
+                                       name="status"
+                                       data-off-color ="danger"
+                                       data-on-text="Active"
+                                   data-off-text="Inactive" 
+                                    checked>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+
+                        <label>Can be Tailored</label>
+
+                        <div class="row ml5">
+                            <input type="checkbox"  class="form-control " 
+                                       name="status"
+                                       data-off-color ="danger"
+                                       data-on-text="Yes"
+                                   data-off-text="No" 
+                                    checked>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Web Sale</label>
+                        <div class="row ml5">
+                            <input type="checkbox"  class="form-control " 
+                                       name="status"
+                                       data-off-color ="danger"
+                                       data-on-text="Active"
+                                   data-off-text="Inactive" 
+                                    checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-6 mt10">
+
+            <a class="btn btn-danger btn-lg mr10 mb10 pull-right   " asp-area="" asp-controller="Item" asp-action="Index"><i class="fa fa-home "></i> Cancel</a>
+            <a class="btn btn-success btn-lg mr10 mb10 pull-right  " asp-area="" asp-controller="Item" asp-action="Edit"><i class="fa fa-save"></i> Save</a>
+
+        </div>
+    </div>
+    <div class="row ml5 mr5 mt10">
+
+        <div class="row">
+            <div class="col-md-3 pr10">
+               
+                <div class="form-group mt10">
+                    <div class="input-group">
+                        <span class="input-group-addon bgblue">Vendor</span>
+                        <input class="form-control" placeholder="Need dynamic search from Vendor Table in dropdown " />
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bglightblue">Description</span>
+                        <textarea rows="5" cols="100" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group">
+                        <span class="input-group-addon bgblue">Department</span>
+                        <select class="form-control">
+                            <option>All</option>
+                            <option>2 Piece Suit</option>
+                            <option>Salwar Kamiz</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bglightblue">Sub Department</span>
+                        <select class="form-control">
+                            <option>All</option>
+                            <option>Pure</option>
+                            <option>Silk</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bgblue">Size Type</span>
+                        <select class="form-control">
+
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bglightblue">Size</span>
+                        <select class="form-control">
+                            <option>Small</option>
+                            <option>Medium</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bgblue">Fabrics</span>
+                        <select class="form-control">
+                            <option>Silk</option>
+                            <option>Cotton</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="input-group mt10">
+                        <span class="input-group-addon bglightblue">Color Group</span>
+                        <select class="form-control">
+                            <option>Red</option>
+                            <option>Pink</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bgblue">Cost Price</span>
+                        <input class="form-control" />
+
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group">
+                        <span class="input-group-addon bglightblue">Sale Price</span>
+                        <input class="form-control" />
+
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group">
+                        <span class="input-group-addon bglightblue">Web Price</span>
+                        <input class="form-control" />
+
+                    </div>
+                </div>
+                </div>
+            <div class="col-md-3 pr10">
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="row ml5">
+                                <input type="checkbox"
+                                       class="form-control "
+                                       name="status"
+                                       data-on-text="Male"
+                                       data-off-text="Female"
+                                       data-off-color="danger"
+                                       checked>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Type</label>
+                            <div class="row ml5">
+                                <input type="checkbox" class="form-control "
+                                       name="status"
+                                       data-on-text="Chidren"
+                                       data-off-color="danger"
+                                       data-off-text="Adult"
+                                       checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                <div class="form-group">
+                    <label>Hex Color</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group mt10">
+                                <span class="input-group-addon bgblue">R</span>
+                                <input class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group mt10">
+                                <span class="input-group-addon bgblue">G</span>
+                                <input class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group mt10">
+                                <span class="input-group-addon bgblue">B</span>
+                                <input class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="input-group mt10">
+                        <span class="input-group-addon bgred">Image Upload</span>
+                        <input id="input-1" type="file" class="file">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <p>Show Image here Take size For exact proportion of width and length and make it responsive get width on auto to take the whole Div</p>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mt10">
+                    <div class="input-group ">
+                        <span class="input-group-addon bgblue">Internal Notes</span>
+                        <textarea rows="10" cols="100" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group mt10">
+                    <div class="input-group">
+                        <span class="input-group-addon bgred">Vendor Notes</span>
+                        <textarea rows="10" cols="100" class="form-control"></textarea>
+                    </div>
+                    </div>
+                </div>
+           
+        </div>
+    </div>
+</div>

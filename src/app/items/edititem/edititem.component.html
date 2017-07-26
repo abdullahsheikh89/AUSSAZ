@@ -1,0 +1,206 @@
+<form>
+    <div class="ml15 mr15 mt10 mb100">
+        <div class="row ml5">
+            <div class="col-md-6">
+                <div class="row">
+                    <h3>Item # 125487</h3>
+
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <label>Sale</label>
+
+                            <div class="row ml5">
+                                  <app-switch-component [onText]="onTextActive" [offText]="offTextActive" [onColor]="onColor" [offColor]="offColor" [size]="size" [disabled]="disabled"></app-switch-component>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <label>Can be Tailored</label>
+
+                            <div class="row ml5">
+                                   <app-switch-component [onText]="onTextYes" [offText]="offTextYes" [onColor]="onColor" [offColor]="offColor" [size]="size" [disabled]="disabled"></app-switch-component>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Web Sale</label>
+                            <div class="row ml5">
+                                      <app-switch-component [onText]="onTextActive" [offText]="offTextActive" [onColor]="onColor" [offColor]="offColor" [size]="size" [disabled]="disabled"></app-switch-component>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6 mt10">
+
+
+                <a class="btn btn-danger btn-lg mr10  pull-right " asp-area="" asp-controller="Item" asp-action="Index"><i class="fa fa-home "></i> Home</a>
+                <a class="btn btn-danger btn-lg mr10  pull-right cancel" href="#"><i class="fa fa-minus "></i> Cancel</a>
+                <a class="btn btn-success btn-lg mr10  pull-right cancel" href="#"><i class="fa fa-save"></i> Save</a>
+                <a class="btn btn-warning btn-lg mr10  pull-right edit " href="#"><i class="fa fa-edit"></i> Edit</a>
+            </div>
+        </div>
+        <div class="row ml5 mr5 mt10">
+
+            <div class="row">
+                <div class="col-md-3 pr10">
+
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bgblue">Vendor</span>
+                            <input type="text" value="Samina Ahmed" required />
+                            <span class="input-group-addon display  ">Samina Ahmed</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Description</span>
+                            <textarea rows="5" cols="100" class="form-control"></textarea>
+                            <span class="input-group-addon  display"></span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bgblue">Department</span>
+                            <select>
+                                <option>All</option>
+                                <option>2 Piece Suit</option>
+                                <option>Salwar Kamiz</option>
+                            </select>
+                            <span class="input-group-addon display  ">2 Pies Suite</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Sub Department</span>
+                            <select>
+                                <option>All</option>
+                                <option>Pure</option>
+                                <option>Silk</option>
+                            </select>
+                            <span class="input-group-addon display  ">Pure</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bgblue">Size Type</span>
+                            <select>
+
+                                <option>USA</option>
+                                <option>UK</option>
+                            </select>
+                            <span class="input-group-addon display  ">USA</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Size</span>
+                            <select>
+                                <option>Small</option>
+                                <option>Medium</option>
+                            </select>
+                            <span class="input-group-addon display  ">Small</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bgblue">Fabrics</span>
+                            <select>
+                                <option>Silk</option>
+                                <option>Cotton</option>
+                            </select>
+                            <span class="input-group-addon display  ">Silk</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="input-group mt10">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Color Group</span>
+                            <select>
+                                <option>Red</option>
+                                <option>Pink</option>
+                            </select>
+                            <span class="input-group-addon display  ">Red</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bgblue">Cost Price $</span>
+                            <input type="text" value="160.00" required />
+                            <span class="input-group-addon display  ">160.00</span>
+
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Sale Price</span>
+                            <input type="text" value="200.00" required />
+                            <span class="input-group-addon display  ">200.00</span>
+
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Web Price</span>
+                            <input type="text" value="190.00" required />
+                            <span class="input-group-addon display  ">190.00</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="row ml5">
+                                     <app-switch-component [onText]="onText" [offText]="offText" [onColor]="onColor" [offColor]="offColor" [size]="size" [disabled]="disabled"></app-switch-component>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Type</label>
+                                <div class="row ml5">
+                                           <app-switch-component [onText]="onTextType" [offText]="offTextType" [onColor]="onColor" [offColor]="offColor" [size]="sizeType" [disabled]="disabled"></app-switch-component>
+                               
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-3">
+                        <p>Show Image here Take size For exact proportion of width and length and make it responsive get width on auto to take the whole Div</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group mt10">
+                            <div class="input-group ">
+                                <span class="input-group-addon bgblue">Internal Notes</span>
+                                <textarea rows="10" cols="100" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group mt10">
+                            <div class="input-group">
+                                <span class="input-group-addon bgred">Vendor Notes</span>
+                                <textarea rows="10" cols="100" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</form>

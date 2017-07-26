@@ -1,0 +1,184 @@
+﻿
+    <div class="row">
+        <div class="block topBar">
+            <span><a href="#" id="trigger" class="menu-trigger" onclick="OpenSunMenu();"></a></span>
+            @await Html.PartialAsync("_LoginPartial")
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        var mode = getStoredValue('myPageMode');
+        function buttonClick(mode) {
+            if (mode == "")
+                mode = "1";
+            mode = mode;
+            storeValue('myPageMode', mode);
+        }
+        function storeValue(key, value) {
+            if (localStorage) {
+                localStorage.setItem(key, value);
+            } else {
+                $.cookies.set(key, value);
+            }
+        }
+        function getStoredValue(key) {
+            if (localStorage) {
+                return localStorage.getItem(key);
+            } else {
+                return $.cookies.get(key);
+            }
+        }
+        function setTitle(sTitle) {
+            //  alert("sTitle =" + sTitle);
+            buttonClick(sTitle);
+        }
+    </script>
+
+    @*abdullah*@
+
+
+
+    <nav id="mp-menu" class="mp-menu">
+        <div class="mp-level">
+            <h2 class="icon icon-world" style="color:white">All Categories</h2>
+            <ul>
+                <li><a class="icon icon-display" asp-area="" asp-controller="Home" asp-action="Index">Orders</a></li>
+                <li class="icon icon-arrow-left">
+                    <a class="icon icon-settings" href="#">SetUp</a>
+                    <div class="mp-level" id="2" onclick="setTitle(2);">
+                        <h2 class="icon icon-settings" style="color:white">Setup</h2>
+                        <a class="mp-back" href="#" onclick="setTitle(0);">back</a>
+                        <ul>
+                            <li><a class="icon icon-location" asp-area="" asp-controller="Setup" asp-action="Index" id="21" onclick="setTitle(21);">Company</a></li>
+                            <li><a class="icon icon-clip" asp-area="" asp-controller="Setup" asp-action="Department" id="22" onclick="setTitle(22);">Department</a></li>
+                            <li><a class="icon icon-eye" asp-area="" asp-controller="Setup" asp-action="SubDepartment" id="23" onclick="setTitle(23);">Sub Department</a></li>
+                            <li><a class="icon icon-location" asp-area="" asp-controller="Setup" asp-action="MainMenue" id="24" onclick="setTitle(24);">Main Menu</a></li>
+                            <li><a class="icon icon-pen" asp-area="" asp-controller="Setup" asp-action="Color" id="25" onclick="setTitle(25);">Color Group</a></li>
+                            <li><a class="icon icon-bubble" asp-area="" asp-controller="Setup" asp-action="Fabrics" id="26" onclick="setTitle(26);">Fabrics</a></li>
+                            <li><a class="icon icon-truck" asp-area="" asp-controller="Setup" asp-action="Shipper" id="27" onclick="setTitle(27);">Shipper</a></li>
+                            <li class="icon icon-arrow-left">
+                                <a class="icon icon-female" href="#">Size</a>
+                                <div class="mp-level" id="28" onclick="setTitle(28);">
+                                    <h2 style="color:white">Size</h2>
+                                    <a class="mp-back" href="#" onclick="setTitle(29;">back</a>
+                                    <ul>
+                                        <li><a class="icon icon-banknote" asp-area="" asp-controller="Size" asp-action="Index" id="31" onclick="setTitle(31);">Size</a></li>
+                                        <li><a class="icon icon-mail" asp-area="" asp-controller="Size" asp-action="SizeType" id="32" onclick="setTitle(32);">Size Type</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a class="icon icon-calendar" asp-area="" asp-controller="Vendor" asp-action="Index">Vendor</a></li>
+                <li><a class="icon icon-data" asp-area="" asp-controller="Item" asp-action="Index">Items</a></li>
+                <li><a class="icon icon-user" asp-area="" asp-controller="Client" asp-action="Index">Clients</a></li>
+                <li><a class="icon icon-banknote" asp-area="" asp-controller="Inventory" asp-action="Index">Inventory</a></li>
+                <li class="icon icon-arrow-left">
+                    <a class="icon icon-cloud" href="#">Web Portal</a>
+                    <div class="mp-level">
+                        <h2 style="color:white">Web Portal</h2>
+                        <a class="mp-back" href="#">back</a>
+                        <ul>
+                            <li><a asp-area="" asp-controller="WebPortal" asp-action="Index">Specials</a></li>
+                            <li><a asp-area="" asp-controller="WebPortal" asp-action="Clearance">Clearance</a></li>
+                            <li><a asp-area="" asp-controller="WebPortal" asp-action="NewArrivals">New Arrivals</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="icon icon-arrow-left">
+                    <a class="icon icon-camera" href="#">Reports</a>
+                    <div class="mp-level">
+                        <h2 style="color:white">Report</h2>
+                        <a class="mp-back" href="#">back</a>
+                        <ul>
+                            <li><a asp-area="" asp-controller="Report" asp-action="">Inventory</a></li>
+                            <li><a asp-area="" asp-controller="Report" asp-action="">PNL</a></li>
+                            <li><a asp-area="" asp-controller="Report" asp-action="">Balance Sheet</a></li>
+                            <li><a asp-area="" asp-controller="Report" asp-action="">Drops</a></li>
+                            <li><a asp-area="" asp-controller="Report" asp-action="">Deposit</a></li>
+                            <li><a asp-area="" asp-controller="Report" asp-action="">Custom</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+    <script>
+        function OpenSunMenu() {
+            var mode = getStoredValue('myPageMode');
+             //alert("mode =" + mode);
+            if (parseInt(mode) > 0 && parseInt(mode) < 20) {
+                var loader = document.getElementById(mode);
+                loader.className = "mp-level mp-level-open";
+            }
+            else if (parseInt(mode) === 21 || parseInt(mode) === 22 || parseInt(mode) === 23 || parseInt(mode) === 24 || parseInt(mode) === 25 || parseInt(mode) === 26 || parseInt(mode) === 27) {
+                var loader2 = document.getElementById(2);
+                loader2.className = "mp-level mp-level-open";
+                loader2 = document.getElementById(2);
+                loader2.className = "mp-level mp-level-open mp-level-overlay";
+
+            }
+            else if (parseInt(mode) === 31 || parseInt(mode) === 32 || parseInt(mode) === 33) {
+                var loader3 = document.getElementById(3);
+                loader3.className = "mp-level mp-level-open";
+                loader3 = document.getElementById(3);
+                loader3.className = "mp-level mp-level-open mp-level-overlay";
+
+            }
+            else if (parseInt(mode) === 41 || parseInt(mode) === 42 || parseInt(mode) === 43) {
+                var loader4 = document.getElementById(4);
+                loader4.className = "mp-level mp-level-open";
+                loader4 = document.getElementById(4);
+                loader4.className = "mp-level mp-level-open mp-level-overlay";
+
+            }
+            else if (parseInt(mode) === 51 || parseInt(mode) === 502 || parseInt(mode) === 503) {
+                var loader5 = document.getElementById(500);
+                loader5.className = "mp-level mp-level-open";
+                loader5 = document.getElementById(5);
+                loader5.className = "mp-level mp-level-open mp-level-overlay";
+
+            }
+            else if (parseInt(mode) === 61 || parseInt(mode) === 62 || parseInt(mode) === 63 || parseInt(mode) === 64 || parseInt(mode) === 65 || parseInt(mode) === 66 || parseInt(mode) === 67 || parseInt(mode) === 68) {
+                var loader6 = document.getElementById(500);
+                loader6.className = "mp-level mp-level-open";
+                loader6 = document.getElementById(5);
+                loader6.className = "mp-level mp-level-open mp-level-overlay";
+
+            }
+            else if (parseInt(mode) === 71 || parseInt(mode) === 72 || parseInt(mode) === 73) {
+                var loader7 = document.getElementById(7);
+                loader7.className = "mp-level mp-level-open";
+                loader7 = document.getElementById(7);
+                loader7.className = "mp-level mp-level-open mp-level-overlay";
+
+            }//customer task
+            else if (parseInt(mode) === 81 || parseInt(mode) === 82 || parseInt(mode) === 83 || parseInt(mode) === 84) {
+                var loader8 = document.getElementById(8);
+                loader8.className = "mp-level mp-level-open";
+                loader8 = document.getElementById(7);
+                loader8.className = "mp-level mp-level-open mp-level-overlay";
+
+            }//vendor task
+            else if (parseInt(mode) === 91 || parseInt(mode) === 92 || parseInt(mode) === 93) {
+                var loader9 = document.getElementById(9);
+                loader9.className = "mp-level mp-level-open";
+                loader9 = document.getElementById(7);
+                loader9.className = "mp-level mp-level-open mp-level-overlay";
+
+            }//paybill
+            
+        }
+    </script>

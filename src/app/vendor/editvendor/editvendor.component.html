@@ -1,0 +1,268 @@
+<style>
+    .cancel, .save,  select, input, .MP4  {
+        display: none;
+    }
+
+    .editing .save,
+    .editing .cancel,
+    .editing .MP4,
+    .editing input,
+    .editing select
+     {
+        display: inline-block;
+    }
+   
+    .editing .edit,
+    .editing .display {
+        display: none;
+    }
+
+    input, select {
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+</style>
+<form>
+    <div class="ml15 mr15 mt10 mb100">
+        <div class="row ml5">
+            <div class="col-md-6">
+                <div class="row">
+                    <h3>Yasmeen</h3>
+
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <label>Sale</label>
+
+                            <div class="row ml5">
+                                <input type="checkbox" 
+                                       class="form-control " 
+                                       name="status"
+                                       data-off-color ="danger"
+                                       data-on-text="Active"
+                                       data-off-text="Inactive" 
+                                       checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <label>Can be Tailored</label>
+
+                            <div class="row ml5">
+                                <input type="checkbox" 
+                                       class="form-control " 
+                                       data-on-text="Yes"
+                                       data-off-text="No" 
+                                       data-off-color ="danger"
+                                       name="status" 
+                                       checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Web Sale</label>
+                            <div class="row ml5">
+                                <input type="checkbox"
+                                       class="form-control "  
+                                       name="status" 
+                                       data-off-color ="danger"
+                                       data-on-text="Active"
+                                       data-off-text="Inactive" 
+                                       checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6 mt10">
+
+
+                <a class="btn btn-danger btn-lg mr10  pull-right " asp-area="" asp-controller="Item" asp-action="Index"><i class="fa fa-home "></i> Home</a>
+                <a class="btn btn-danger btn-lg mr10  pull-right cancel" href="#"><i class="fa fa-minus "></i> Cancel</a>
+                <a class="btn btn-success btn-lg mr10  pull-right cancel" href="#"><i class="fa fa-save"></i> Save</a>
+                <a class="btn btn-warning btn-lg mr10  pull-right edit " href="#"><i class="fa fa-edit"></i> Edit</a>
+            </div>
+        </div>
+        <div class="row ml5 mr5 mt10">
+
+            <div class="row">
+                <div class="col-md-3 pr10">
+
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bgblue">Vendor</span>
+                            <input type="text" value="Samina Ahmed" required />
+                            <span class="input-group-addon display  ">Samina Ahmed</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Description</span>
+                            <textarea rows="5" cols="100" class="form-control"></textarea>
+                            <span class="input-group-addon  display"></span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bgblue">Department</span>
+                            <select>
+                                <option>All</option>
+                                <option>2 Piece Suit</option>
+                                <option>Salwar Kamiz</option>
+                            </select>
+                            <span class="input-group-addon display  ">2 Pies Suite</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Sub Department</span>
+                            <select>
+                                <option>All</option>
+                                <option>Pure</option>
+                                <option>Silk</option>
+                            </select>
+                            <span class="input-group-addon display  ">Pure</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bgblue">Size Type</span>
+                            <select>
+
+                                <option>USA</option>
+                                <option>UK</option>
+                            </select>
+                            <span class="input-group-addon display  ">USA</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Size</span>
+                            <select>
+                                <option>Small</option>
+                                <option>Medium</option>
+                            </select>
+                            <span class="input-group-addon display  ">Small</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bgblue">Fabrics</span>
+                            <select>
+                                <option>Silk</option>
+                                <option>Cotton</option>
+                            </select>
+                            <span class="input-group-addon display  ">Silk</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="input-group mt10">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Color Group</span>
+                            <select>
+                                <option>Red</option>
+                                <option>Pink</option>
+                            </select>
+                            <span class="input-group-addon display  ">Red</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt10">
+                        <div class="input-group ">
+                            <span class="input-group-addon pt10 pb10 bgblue">Cost Price $</span>
+                            <input type="text" value="160.00" required />
+                            <span class="input-group-addon display  ">160.00</span>
+
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Sale Price</span>
+                            <input type="text" value="200.00" required />
+                            <span class="input-group-addon display  ">200.00</span>
+
+                        </div>
+                    </div>
+                    <div class="form-group mt10">
+                        <div class="input-group">
+                            <span class="input-group-addon pt10 pb10 bglightblue">Web Price</span>
+                            <input type="text" value="190.00" required />
+                            <span class="input-group-addon display  ">190.00</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="row ml5">
+                                    <input type="checkbox" 
+                                            class="form-control "  
+                                              name="status" 
+                                       data-on-text="Male"
+                                           data-off-text="Female" 
+                                           data-off-color ="danger"
+                                           checked>
+                                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Type</label>
+                                <div class="row ml5">
+                                    <input type="checkbox"  class="form-control "  
+                                       name="status" 
+                                           data-on-text="Chidren"
+                                           data-off-color ="danger"
+                                       data-off-text="Adult" 
+                                       checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-3">
+                        <p>Show Image here Take size For exact proportion of width and length and make it responsive get width on auto to take the whole Div</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group mt10">
+                            <div class="input-group ">
+                                <span class="input-group-addon bgblue">Internal Notes</span>
+                                <textarea rows="10" cols="100" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group mt10">
+                            <div class="input-group">
+                                <span class="input-group-addon bgred">Vendor Notes</span>
+                                <textarea rows="10" cols="100" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</form>

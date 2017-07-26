@@ -1,0 +1,111 @@
+﻿@{
+    ViewData["Title"] = "Color";
+}
+
+@section Scripts {
+    <script>
+    $(document).ready(function(){
+    $('#myTable').DataTable();
+    });
+    </script>
+}
+
+
+<div class="ml15 mr15 mt10 mb100">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Color Group</h2>
+        </div>
+        <div class="col-md-6">
+
+
+        </div>
+
+    </div>
+    <div class="row mt15">
+        <div class="col-md-6">
+            <div class="col-md-6">
+                
+                <div class="row form-group mr10">
+                    <div class="input-group">
+                        <span class="input-group-addon bgblue">Name</span>
+
+                        <label class="text form-control "></label>
+                    </div>
+                    </div>
+                <div class="row form-group">
+                    <label>RGB Color</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-addon bgblue">R</span>
+                                <input class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-addon bgblue">G</span>
+                                <input class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-addon bgblue">B</span>
+                                <input class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row form-group mr10">
+
+                    <div class="input-group">
+                        <span class="input-group-addon bgblue">Hex Color</span>
+                        <label class="text form-control "></label>
+                    </div>
+                    </div>
+                <div class="row form-group mr10">
+                    <button type="button" class="btn btn-success  "><i class="fa fa-save "></i> Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <table class="table table-hover table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">#</th>
+                        <th class="col-md-3">Color Name</th>
+                        <th class="col-md-1">R</th>
+                        <th class="col-md-1">G</th>
+                        <th class="col-md-1">B</th>
+                        <th class="col-md-2">Hex Color</th>
+                        <th class="col-md-1">Color</th>
+                        <th class="col-md-3 text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                       
+                        <td>Pink</td>
+                        <td>255</td>
+                        <td>105</td>
+                        <td>180</td>
+                        <td>#FF69B4</td>
+                        <td style="background-color:Pink">
+                            
+                        </td>
+                        <td>
+
+                            <button type="button" class="btn btn-warning col-lg-push-6  "><i class="fa fa-edit "></i> </button>
+                        </td>
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

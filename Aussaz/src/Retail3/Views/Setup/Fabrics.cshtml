@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Color";
+}
+
+@section Scripts {
+    <script>
+    $(document).ready(function(){
+    $('#myTable').DataTable();
+    });
+    </script>
+}
+
+
+<div class="ml15 mr15 mt10 mb100">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Fabrics</h2>
+        </div>
+        <div class="col-md-6">
+
+
+        </div>
+
+    </div>
+    <div class="row mt15">
+        <div class="col-md-6">
+            <div class="col-md-6">
+
+                <div class="form-group mt10 ">
+                    <div class="input-group">
+                        <span class="input-group-addon bgblue">Name</span>
+                        <input class="text form-control "/>
+                    </div>
+                </div>
+                <div class="form-group mt10 ">
+                    <div class="input-group">
+                        <span class="input-group-addon bgblue">History</span>
+                        <textarea rows="10" cols="100" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group mt10 ">
+                    <div class="input-group">
+                        <span class="input-group-addon bgblue">Fabric Image</span>
+                        <input id="input-1" type="file" class="file">
+                    </div>
+                    </div>
+                    <div class="row form-group mt10 ">
+                        <button type="button" class="btn btn-success ml15  "><i class="fa fa-save "></i>&nbsp;&nbsp; Save &nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-md-6">
+            <table class="table table-hover table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">#</th>
+                        <th class="col-md-2">Name</th>
+                        <th class="col-md-7">History</th>
+                        <th class="col-md-1">Image</th>
+                        <th class="col-md-1 text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                       
+                        <td>Silk</td>
+                        <td></td>
+                        <td>
+
+                            <img src="~/images/silk.jpg" width="50" />
+                        </td>
+                        <td>
+
+                            <button type="button" class="btn btn-warning col-lg-push-6  "><i class="fa fa-edit "></i> </button>
+                        </td>
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
